@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Google Software Product Sprint
 
 This repo contains the projects you'll work on throughout SPS.
@@ -10,3 +11,8 @@ To get started:
   - If the tutorial panel does not open or display the walkthrough contents, try refreshing the page.
 
 Then follow the on-screen instructions to set up your repo.
+=======
+# my-portfolio-
+
+This repo contains Gelila's portfolio and SPS projects.
+>>>>>>> f3038dad2f250cc4028fc8bad97f758cd719f48d
