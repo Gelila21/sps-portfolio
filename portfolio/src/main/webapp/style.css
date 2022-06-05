@@ -9,10 +9,10 @@
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
 
-    --fw-reg: 300;
+    --fw-reg: 300; /* might need to change later*/
     --fw-bold: 900;
 
-    --clr-light: # fff;
+    --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #afa075;
 
@@ -114,7 +114,7 @@ h3{font-size: var(--fs-h3)}
 .section__subtitle--intro,
 .section__subtitle--about{
     background: var(--clr-accent);
-    padding: .25em;
+    padding: .25em 1em;
     font-family: var(--ff-seconday);
     margin-bottom: 1em;
 }
@@ -224,9 +224,13 @@ header{
 .intro {
 position: relative;
 }
-.into__img{
+.intro__img{
     box-shadow: var(--bs);
 
+}
+
+.section__subtitle--intro{
+    display: inline-block;
 }
 
 @media (min-width: 600px){
@@ -234,7 +238,7 @@ position: relative;
         display: grid;
         width: min-content;
         margin: 0 auto;
-        grid-column: 1em ;
+        grid-column-gap: 1em ;
         grid-template-areas:
         "img title"
         "img subtitle";
@@ -265,6 +269,7 @@ z-index: 2;
     background-color:  var(--clr-accent);
     background-image: url(6292704cc580d.jpg);
     background-size: cover;
+    background-blend-mode: multiply;
     color: var(--clr-light);
 
     text-align: center;
@@ -296,7 +301,7 @@ z-index: 2;
 @media (min-width: 800px){
     .services{
         display: flex;
-        max-width: 100px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right:auto
     }
@@ -334,10 +339,10 @@ grid-column-gap: 2em;
     }
 
     .section__subtitle--about{
-        grid-column: 1/-1;
+        grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -2em;
+        left: -1em;
         width: calc(100%+ 4em);
         padding-left: 2em;
         padding-right: calc(200px + 4em);
@@ -357,6 +362,7 @@ grid-column-gap: 2em;
     color: var(--clr-light);
     text-align: center;
 }
+
 }
 .portfolio{
     display: grid;
@@ -394,7 +400,7 @@ body{
 .footer{
  
     background: #111;
-    color: var(--clraccent);
+    color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
@@ -407,11 +413,18 @@ body{
 
 .footer a{
     color: inherit;
+text-decoration: none;    
   
 } 
 
-.footer__link:hover{
+.footer__link:hover,
+.social-list__link:hover{
     opacity: .7;
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+    
 }
 
 .social-list{
