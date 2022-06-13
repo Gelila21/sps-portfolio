@@ -31,7 +31,7 @@ document.getEelementById('getText').addEventListener
 ('click', getText);
 
 function getText(){
-   fetch('textfile.txt')
+   fetch("textfile.txt")
    .then(function(response){
        return reponse.text();
    })
