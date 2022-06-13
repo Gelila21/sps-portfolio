@@ -52,7 +52,7 @@
               fetch(textfile.txt)
               .then((res) => res.text())
               .then((data)=>{
-                  document.getElementById('output').innerHTML=data;
+                  document.getElementById('output').innerText = data;
               })
             }
            </script>
