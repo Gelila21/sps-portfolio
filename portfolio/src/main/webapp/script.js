@@ -26,3 +26,16 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+document.getEelementById('getText').addEventListener
+('click', getText);
+
+function getText(){
+   fetch('textfile.txt')
+   .then(function(response){
+       return reponse.text();
+   })
+   .then(function(data){
+       document.getElementById('output').innerHTML = data;
+   })
+ }
