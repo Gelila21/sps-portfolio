@@ -43,6 +43,19 @@
           <p class="section__subtitle section__subtitle--intro">/Computer Science Student/</p>
        <!--add pic-->  <img src="images/IMG_6055 2 Small.jpeg" alt="pic of me smilimg" class="intro__img">
        <button id="getText">Get text</button>
+<div id = "output"></div>
+       <script>
+           document.getEelementById('getText').addEventListener
+           (click, getText);
+
+           function getText(){
+              fetch(textfile.txt)
+              .then((res) => res.text())
+              .then((data)=>{
+                  document.getElementById('output').innerHTML=data;
+              })
+            }
+           </script>
         </section>
 
     <!--My Services-->
