@@ -46,12 +46,14 @@
 <div id = "output"></div>
        <script>
            document.getEelementById('getText').addEventListener
-           (click, getText);
+           ('click', getText);
 
            function getText(){
               fetch('textfile.txt')
-              .then((res) => res.text())
-              .then((data)=>{
+              .then(function(response){
+                  return reponse.text();
+              })
+              .then(function(data){
                   document.getElementById('output').innerHTML = data;
               })
             }
