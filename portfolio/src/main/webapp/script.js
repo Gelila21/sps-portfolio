@@ -27,15 +27,14 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-document.getEelementById('getText').addEventListener
-('click', getText);
+document.getEelementById('getText').addEventListener('click', getText);
 
 function getText(){
    fetch("textfile.txt")
    .then(function(response){
-       return reponse.text();
+       return response.text();
    })
    .then(function(data){
-       document.getElementById('output').innerHTML = data;
+       document.getElementById('output').innerText = data;
    })
  }
