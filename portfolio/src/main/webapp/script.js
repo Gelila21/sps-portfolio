@@ -27,7 +27,7 @@ function addRandomGreeting() {
   greetingContainer.innerText = greeting;
 }
 
-document.getEelementById('getText').addEventListener('click', getText);
+
 
 function getText(){
    fetch("textfile.txt")
@@ -35,6 +35,7 @@ function getText(){
        return response.text();
    })
    .then(function(data){
-       document.getElementById('output').innerText = data;
+       document.getElementById('output').innerHTML = data;
    })
  }
+ document.getEelementById('getText').addEventListener('click', getText);
