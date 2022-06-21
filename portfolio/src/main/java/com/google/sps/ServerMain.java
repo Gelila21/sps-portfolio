@@ -8,7 +8,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.webapp.Configuration;
 import org.eclipse.jetty.webapp.WebAppContext;
 import org.eclipse.jetty.webapp.WebInfConfiguration;
-
+import java.util.Objects;
 /**
  * Starts up the server, including a DefaultServlet that handles static files, and any servlet
  * classes annotated with the @WebServlet annotation.
@@ -48,4 +48,5 @@ public class ServerMain {
     // Keep the main thread alive while the server is running.
     server.join();
   }
+
 }
