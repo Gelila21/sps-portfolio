@@ -1,63 +1,36 @@
 package com.google.sps.servlets;
-import java.util.Objects;
+
+import java.io.IOException;
+
+//import javax.servlet.ServletOutputStream;
+import com.google.sps.servlets.GHobby;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
 
 
-
-  public class Hobby {
-
-    private Long id;
-    private String name;
-  
-
-    public Hobby(Long id, String name) {
-        this.id = id;
-        this.name = name;
-   
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
- 
+@WebServlet("/hobby")
+public class Hobby extends HttpServlet{
 
     @Override
-    public int hashCode() {
-        int hash = 2;
-        hash = 97 * hash + Objects.hashCode(this.id);
-        hash = 97 * hash + Objects.hashCode(this.name);
-     
-        return hash;
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        GHobby Hobject = new GHobby("Sketching","Skating", "Reading");
+
+        String obj = convertToJsonUsingGson(Hobject);
+      response.setContentType("application/json;");
+      response.getWriter().println(obj);
+
+       
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Hobby other = (Hobby) obj;
-        
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return Objects.equals(this.id, other.id);
-    }
+    
+
+    private String convertToJsonUsingGson(GHobby myHobby ) {
+        Gson gson = new Gson();
+        String json = gson.toJson(myHobby);
+        return json;
+      }
 }

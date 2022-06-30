@@ -28,7 +28,7 @@ function addRandomGreeting() {
 }
 
 
-document.getEelementById('getText').addEventListener('click', getText);
+document.getElementById('getText').addEventListener('click', getText);
 function getText(){
     fetch("textfile.txt")
    
@@ -39,4 +39,30 @@ function getText(){
        document.getElementById('output').innerHTML = data;
    })
  }
+
+ async function getHobbies(){
+    const responseFromServer = await fetch('/hobby');
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const hobby = await responseFromServer.json();
+  
+    const NewH= document.getElementById('hobbies');
+
+    NewH.innerHTML = '';
+
+  NewH.appendChild(
+      createListElement('Hobby 1' + hobby.H1));
+  NewH.appendChild(
+      createListElement('Hobby 2' + hobby.H2));
+ NewH.appendChild(
+      createListElement('Hobby 3' + hobby.H3));
+  
+}
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
  
