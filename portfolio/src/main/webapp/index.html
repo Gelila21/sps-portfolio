@@ -18,7 +18,7 @@
     <a href="/hobby">GetHobbies</a>
   <header>
     <div class = "logo">
-   <!--change ..image--> <img src = "images/di.png" alt="" >
+   <!--change ..image--> <img src = "images/logoC.png" alt="" >
 </div>
 <button class = "nav-toggle aria-lable = "toggle navigation">
     <span class = "hamburger"></span>
@@ -44,7 +44,7 @@
     </h1>
           <p class="section__subtitle section__subtitle--intro">/Computer Science Student/</p>
        <!--add pic-->  <img src="images/IMG_6055 2 Small.jpeg" alt="pic of me smilimg" class="intro__img">
-       <button id="getText">Click</button>
+       <button id="getText">Click to see my favorite saying</button>
 <div id = "output"></div>
 
 <script src="script.js"> </script> 
@@ -103,21 +103,22 @@
 <!-- hobbies-->
 <section class = "my-work" id = "work">
 <h2 class = "section__title section__title--work">My Projects</h2>
-<p class ="section__subtitle section__subtitle--work">Some of my works</p>
+<p class ="section__subtitle section__subtitle--work">Click on Image to view code.</p>
 
 <div class = "portfolio">
+    <p>Bag Interface Implementation</p>
     <a href ="https://github.com/CS2400-Rubber-Duckies/Project1" class = "portfolio__item">
-      <!--add portfolio img-->  <img src = "images/bbag.png" alt="describe project" class = "portfolio img">
+      <!--add portfolio img-->  <img src = "images/Bags.png" alt="describe project" class = "portfolio img">
     </a>
-
+    <p>Heap Implementation</p>
     <a href ="https://github.com/CS2400-Rubber-Duckies/Project3" class = "portfolio__item">
         <!--add portfolio img-->  <img src = "images/Heap.webp" alt="describe project" class = "portfolio img">
       </a>
-
+      <p>Graph Implementation</p>
       <a href ="https://github.com/CS2400-Rubber-Duckies/Project5" class = "portfolio__item">
         <!--add portfolio img-->  <img src = "images/graphs.png" alt="describe project" class = "portfolio img">
       </a>
-
+      <p>Stack Implementation</p>
       <a href ="https://github.com/CS2400-Rubber-Duckies/Project-2" class = "portfolio__item">
         <!--add portfolio img-->  <img src = "images/stack.png.webp" alt="describe project" class = "portfolio img">
       </a>
@@ -150,9 +151,10 @@
    
 </ul>
 <!-- Sending Requests-->
+
 <h2 >Contact Me</h2>
 <form action="/form-handler" method="POST">
-    <label for="fname">Name.</label><br>
+    <label for="fname">Full Name</label><br>
     <input type="text" id="fname" name="fname" ><br>
 
     <label for="email">Email Adress</label><br>
