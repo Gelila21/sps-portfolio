@@ -266,7 +266,7 @@ z-index: 2;
 }
 
 .my-services{
-    background-color:  var(--clr-dark);
+    background-color:  var(--clr-accent);
     background-image: url(images/0TECH.jpeg);
     background-size: cover;
     background-blend-mode: multiply;
@@ -276,7 +276,7 @@ z-index: 2;
 }
 
 .section__title--services{
-    color: var(--clr-accent);
+    color: var(--clr-dark);
     position: relative;
 }
 
