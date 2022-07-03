@@ -270,7 +270,7 @@ z-index: 2;
     background-image: url(images/0TECH.jpeg);
     background-size: cover;
     background-blend-mode: multiply;
-    color: var(--clr-light); /*maybe chage this to dark*/
+    color: var(--clr-dark); /*maybe chage this to dark*/
 
     text-align: center;
 }
